@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+    <variable
+        name="restaurant"
+        type="com.example.deependra.zomatotestapp.models.Restaurant"/>
+    </data>
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/dimens_150"
+        android:layout_marginBottom="@dimen/dimens_15"
+        android:paddingEnd="@dimen/dimens_10"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/dimens_5"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/tvName"
+            android:textColor="@color/grey_text"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimens_15"
+            android:text="@{restaurant.getName()}" />
+
+        <ImageView
+            android:layout_below="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimens_140"
+            android:layout_marginTop="@dimen/dimens_10"
+            android:id="@+id/ivFeaturedImage"/>
+
+        <TextView
+            android:id="@+id/tvAddress"
+            android:textColor="@color/grey_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-condensed"
+            android:letterSpacing="0.02"
+            android:layout_below="@+id/ivFeaturedImage"
+            android:layout_marginTop="@dimen/dimens_10"
+            android:text="@{restaurant.getLocation().getAddress()}" />
+
+        <TextView
+            android:textColor="@color/grey_text"
+            android:id="@+id/tvAvgPriceHeader"
+            android:layout_below="@+id/tvAddress"
+            android:textSize="13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_10"
+            android:text="@string/AVG_PRICE_HEADER" />
+
+        <TextView
+            android:id="@+id/tvAvgPrice"
+            android:textColor="@color/grey_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:layout_alignTop="@+id/tvAvgPriceHeader"
+            android:layout_toEndOf="@+id/tvAvgPriceHeader"
+            android:layout_marginStart="@dimen/dimens_10"
+            android:paddingBottom="@dimen/dimens_15"
+            android:text="@{restaurant.currency() + restaurant.getAverage_cost_for_two() + ` for 2 people`}" />
+    </RelativeLayout>
+</layout>

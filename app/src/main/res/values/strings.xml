@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ZomatoTestApp</string>
+    <string name="SEARCH_BOX_HINT">Search hotels, Cuisines</string>
+    <string name="AVG_PRICE_HEADER">Avg Price :</string>
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginEnd="@dimen/dimens_18"
+    android:layout_marginStart="@dimen/dimens_18"
+    android:layout_marginTop="@dimen/dimens_14">
+
+    <EditText
+        android:id="@+id/tvSearchText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:ellipsize="end"
+        android:hint="@string/SEARCH_BOX_HINT"
+        android:maxLines="1"
+        android:background="#00000000"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/ivResetSearch"
+        android:textSize="18sp"
+        android:textColorHint="@color/light_grey"
+        android:textColor="@color/grey_text"
+        />
+
+    <ImageView
+        android:id="@+id/ivResetSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimens_10"
+        android:visibility="invisible"
+        android:layout_marginEnd="@dimen/dimens_5"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        app:srcCompat="@drawable/ic_close_black_24dp"/>
+</RelativeLayout>
